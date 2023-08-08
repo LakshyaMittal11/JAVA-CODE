@@ -10,6 +10,7 @@ int i=1;
 while(i<=a)
 {
 System.out.println(i);
-i++
+i++;
+}
 }
 }
