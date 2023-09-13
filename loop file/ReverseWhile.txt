@@ -1,0 +1,17 @@
+import java.util.*;
+class ReverseWhile
+{
+	public static void main(String[] args)
+	{
+		Scanner ob = new Scanner(System.in);
+		System.out.print("Enter The Starting Number : ");
+		int s =ob.nextInt();
+		System.out.print("Enter The Ending Number : ");
+		int e =ob.nextInt(); 
+		while(s>=e)
+		{
+			System.out.println(s);
+			s--;
+		}
+	}
+}
