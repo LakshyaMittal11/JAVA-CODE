@@ -1,5 +1,5 @@
 import java.util.*;
-class y
+class Average
 {
 public static void main(String K[])
 {
