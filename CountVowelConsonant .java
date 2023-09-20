@@ -1,3 +1,4 @@
+import java.util.*;
 public class CountVowelConsonant {    
     public static void main(String[] args) {    
         int vCount = 0, cCount = 0;      
