@@ -1,5 +1,5 @@
 import java.util.*;
-class Z
+class Pattern 
 {
 public static void main(String k[])
 {
