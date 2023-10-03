@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String guestName = sc.nextLine();
+        String hostName = sc.nextLine();
+        String letterPile = sc.nextLine();
+        String combinedNames = guestName + hostName;
+        for (char letter : combinedNames.toCharArray()) {
+            if (letterPile.contains(String.valueOf(letter))) {
+                letterPile = letterPile.replaceFirst(String.valueOf(letter), "");
+            } else {
+                System.out.println("NO");
+                sc.close();
+                return;
+            }
+        }
+        System.out.println(letterPile.isEmpty() ? "YES" : "NO");
+    }
+}
