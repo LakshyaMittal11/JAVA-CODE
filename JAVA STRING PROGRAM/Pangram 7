@@ -1,0 +1,21 @@
+import java.util.*;
+public class PangramChecker {
+    public static void main(String[] args) {
+        String inputString = "The quick brown fox jumps over the lazy dog";
+        if (isPangram(inputString)) {
+            System.out.println("NO");
+        } else {
+            System.out.println("YES");
+        }
+    }
+
+    public static boolean isPangram(String s) {
+        s = s.toLowerCase();
+        for (char c = 'a'; c <= 'z'; c++) {
+            if (s.indexOf(c) == -1) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
