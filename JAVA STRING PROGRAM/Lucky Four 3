@@ -1,0 +1,14 @@
+import java.util.Scanner;
+public class CountDigitFour {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int T = sc.nextInt();
+        for (int i = 0; i < T; i++) {
+            int num = sc.nextInt();
+            int o = String.valueOf(num).replaceAll("[^4]", "").length();
+            System.out.println(o);
+        }
+
+   
+    }
+}
