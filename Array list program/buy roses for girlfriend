@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        while (sc.hasNext()) {
+            int n = sc.nextInt();
+            int[] prices = new int[n];
+            for (int i = 0; i < n; i++) {
+                prices[i] = sc.nextInt();
+            }
+            int m = sc.nextInt();
+            Arrays.sort(prices);
+            int left = 0, right = n - 1;
+            int rose1 = 0, rose2 = 0;
+            while (left < right) {
+                int sum = prices[left] + prices[right];
+                if (sum == m) {
+                    rose1 = prices[left];
+                    rose2 = prices[right];
+                    left++;
+                    right--;
+                } else if (sum < m) {
+                    left++;
+                } else {
+                    right--;
+                }
+            }
+            System.out.println("Deepak should buy roses whose prices are " + rose1 + " and " + rose2 + ".");
+            System.out.println();
+        }
+    }
+}
