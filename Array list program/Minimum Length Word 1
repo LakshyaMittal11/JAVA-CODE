@@ -1,0 +1,17 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        String[] words = input.split(" ");
+        String minWord = "";
+        int minWordLength = Integer.MAX_VALUE;
+        for (String word : words) {
+            if (word.length() < minWordLength) {
+                minWord = word;
+                minWordLength = word.length();
+            }
+        }
+        System.out.println(minWord);
+    }
+}
