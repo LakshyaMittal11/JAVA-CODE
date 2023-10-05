@@ -1,0 +1,30 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt();
+        for (int i = 0; i < n; i++) {
+            long num = sc.nextLong();
+            boolean isTPrime = isTPrime(num);
+
+            if (isTPrime) {
+                System.out.println("YES");
+            } else {
+                System.out.println("NO");
+            }
+        }
+    }
+    public static boolean isTPrime(long num) {
+        if (num < 4) {
+            return false;
+        }
+        long sqrt = (long) Math.sqrt(num);
+        for (long i = 2; i * i <= sqrt; i++) {
+            if (sqrt % i == 0) {
+                return false;
+            }
+        }
+        long sqrtSquared = sqrt * sqrt;
+        return sqrtSquared == num;
+    }
+}
